@@ -1,0 +1,70 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : SET
+Version: S-2021.06-SP2
+Date   : Tue Jan 18 10:43:13 2022
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: y_axis_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: in_A_reg (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SET                tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  y_axis_reg[0]/CK (DFFSX1)                0.00       0.50 r
+  y_axis_reg[0]/Q (DFFSX1)                 0.77       1.27 f
+  U0/y_axis[0] (check)                     0.00       1.27 f
+  U0/U32/Y (NOR2X1)                        0.68       1.95 r
+  U0/U28/Y (OAI2BB1X1)                     0.29       2.23 r
+  U0/U27/Y (OA21XL)                        0.77       3.00 r
+  U0/U66/Y (AOI21X2)                       0.28       3.28 f
+  U0/U52/Y (OAI22X4)                       0.40       3.68 r
+  U0/U49/Y (INVX8)                         0.11       3.79 f
+  U0/U9/Y (OAI22XL)                        0.67       4.46 r
+  U0/U81/Y (CLKINVX1)                      0.53       4.99 f
+  U0/U82/Y (NOR2X1)                        0.31       5.30 r
+  U0/mult_138_2/U7/S (ADDHXL)              0.40       5.71 r
+  U0/mult_138_2/U4/CO (ADDFXL)             0.87       6.58 r
+  U0/mult_138_2/U3/CO (ADDFXL)             0.50       7.07 r
+  U0/mult_138_2/U2/S (ADDFXL)              1.02       8.09 r
+  U0/add_138/U1_6/S (ADDFHX4)              0.42       8.51 r
+  U0/U19/Y (INVX6)                         0.07       8.58 f
+  U0/U114/Y (OAI21XL)                      0.41       8.98 r
+  U0/U116/Y (OA21XL)                       0.39       9.37 r
+  U0/U117/Y (AOI211X1)                     0.20       9.58 f
+  U0/U65/Y (INVX3)                         0.11       9.69 r
+  U0/U64/Y (OAI31X2)                       0.18       9.87 f
+  U0/in_circle (check)                     0.00       9.87 f
+  in_A_reg/D (EDFFX4)                      0.00       9.87 f
+  data arrival time                                   9.87
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  in_A_reg/CK (EDFFX4)                     0.00      10.40 r
+  library setup time                      -0.47       9.93
+  data required time                                  9.93
+  -----------------------------------------------------------
+  data required time                                  9.93
+  data arrival time                                  -9.87
+  -----------------------------------------------------------
+  slack (MET)                                         0.06
+
+
+1
